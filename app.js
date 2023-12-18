@@ -96,7 +96,7 @@ var itemname = [
 function updateCart() {
   let cartnumber = 0;
   for (i = 0; i < itemname.length; i++) {
-    cartnumber = cartnumber + itemname[i].quantity;
+    cartnumber = cartnumber+itemname[i].quantity;
   }
   value.innerHTML = cartnumber;
 }
@@ -113,24 +113,17 @@ for (let i = 0; i < carts.length; i++) {
 function price() {
   let totalPriceInCents = 0;
   for (i = 0; i < itemname.length; i++) {
-    totalPriceInCents =
-      totalPriceInCents +
-      itemname[i].quantity * (itemname[i].dollars * 100 + itemname[i].cents);
+    totalPriceInCents= totalPriceInCents+itemname[i].quantity*(itemname[i].dollars*100+itemname[i].cents);
   }
-  finalDollars = Math.floor(totalPriceInCents / 100);
-  finalCents = totalPriceInCents % 100;
+  finalDollars=Math.floor(totalPriceInCents / 100);
+  finalCents=totalPriceInCents % 100;
 }
 
 value.onclick = () => {
   price();
   for (let i = 0; i < itemname.length; i++) {
     if (itemname[i].quantity != 0) {
-      console.log(
-        "Item name: " +
-          itemname[i].name +
-          " - Quantity: " +
-          itemname[i].quantity
-      );
+      console.log("Item name: "+itemname[i].name+"- Quantity: "+itemname[i].quantity);
     }
   }
   console.log(
