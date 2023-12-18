@@ -134,12 +134,12 @@ value.onclick = () => {
     }
   }
   console.log(
-    "The total amount is " + finalDollars + "$ and " + finalCents + " cents"
+    "The total amount is"+finalDollars+"$ and "+finalCents+"cents"
   );
   let message =
-    "The total amount is " + finalDollars + "$ and " + finalCents + " cents";
+    "The total amount is"+finalDollars+"$ and "+finalCents+" cents";
   const encodedMessage = encodeURIComponent(message);
   const phone = 9876543210;
-  window.open(`https://wa.me/${phone}?text=${encodedMessage}`, "_blank");
+  window.open(`https://wa.me/${phone}?text=${encodedMessage}`,"_blank");
 };
 
