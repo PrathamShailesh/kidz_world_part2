@@ -1,5 +1,6 @@
 const carts = document.querySelectorAll(".button");
 const value = document.getElementById("cart-value");
+const cartbutton = document.getElementById("cart")
 
 let cartCount = 0;
 let totalPrice = 0;
@@ -126,6 +127,10 @@ value.onclick = () => {
       console.log("Item name: "+itemname[i].name+"- Quantity: "+itemname[i].quantity);
     }
   }
+
+};
+
+cartbutton.onclick=()=>{
   console.log(
     "The total amount is"+finalDollars+"$ and "+finalCents+"cents"
   );
@@ -134,5 +139,5 @@ value.onclick = () => {
   const encodedMessage = encodeURIComponent(message);
   const phone = 9876543210;
   window.open(`https://wa.me/${phone}?text=${encodedMessage}`,"_blank");
-};
+}
 
